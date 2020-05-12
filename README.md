@@ -24,6 +24,7 @@ The PostgreSQL database is hosted on Heroku. If you want to run locally using yo
 ### Frontend
 Work in Progress
 ### Authentication Set Up
+Tokens can be found in the setup.sh file.
 ### Testing
 To run the tests locally, you need to have PostgreSQL installed on your local machines already.
 To set up a test database, replace the following fields on the test_app.py file:
