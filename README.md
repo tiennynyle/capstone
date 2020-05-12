@@ -102,7 +102,7 @@ There are 3 roles:
   "success": true
 }
 ```
-#### DELETE /actors/<int:id> (Casting Director, Producer)
+#### DELETE /actors/<<int:id>> (Casting Director, Producer)
 - General: Deletes an actor from the database by id and returns success value and id of the deleted actor
 - Sample: Response for a request to delete an actor with id=2 and the appropriate header:
 ```
@@ -111,7 +111,7 @@ There are 3 roles:
   "success": true
 }
 ```
-#### DELETE /movies/<int:id> (Producer)
+#### DELETE /movies/<<int:id>> (Producer)
 - General: Deletes a movie from the database by id, returns success value and id of the deleted movie
 - Sample: Response for a request to delete a movie with id=2 and the appropriate header:
 ```
@@ -120,7 +120,7 @@ There are 3 roles:
   "success": true
 }
 ```
-#### PATCH /actors/<int:id> (Casting Director, Producer)
+#### PATCH /actors/<<int:id>> (Casting Director, Producer)
 - General: Modifies an actor by id using JSON request parameters and returns success value and id of the modified actor
 - Sample: Response for a request to modify an actor with id=3, with the following body {"name": "Tien Le","age": "22","gender": "Female"} and the appropriate header:
 ```
@@ -129,7 +129,7 @@ There are 3 roles:
   "updated": 3
 }
 ```
-#### PATCH /movies/<int:id> (Casting Director, Producer)
+#### PATCH /movies/<<int:id>> (Casting Director, Producer)
 - General: Modifies a movie by id using JSON request parameters; returns success value and id of the modified movie
 - Sample: Response for a request to modify a movie with id=3, with the following body{"title": "Mat Biec", "release_date": "2020-01-02"} and the appropriate header:
 ```
