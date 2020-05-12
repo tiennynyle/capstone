@@ -5,9 +5,34 @@ This project is the capstone project of the Full Stack Developer Nano Degree by 
 I decided to implement a RESTful for a Casting Agency application that enables users to create/manage actors and movies.
 
 ## Getting Started
+### Pre-requisites and Local Development
+You should already have Python3, pip and node installed on your local machines
+To create a virtual environment on MacOS, run:
+```python3 -m venv env```
+To activate the virtual environment, run:
+```source env/bin/activate```
+## About the Stack
+### Backend
+On MacOS, to set up all the dependencies, run:
+```pip install requirements.txt```
+To run the application on your local machine, run:
+```python3 app.py```
+The application is hosted on https://sheltered-bayou-87289.herokuapp.com/ and can also be run locally at http://127.0.0.1:5000/ .
+The PostgreSQL database is hosted on Heroku. If you want to run locally using your local databse, you can modify the following fields in the models.py file:
+```database_name =<your_database_name>, database_path = <your_database_path```
+
+### Frontend
+Work in Progress
+### Authentication Set Up
+### Testing
+To run the tests locally, you need to have PostgreSQL installed on your local machines already.
+To set up a test database, replace the following fields on the test_app.py file:
+```db_user =<your username>```
+To run the tests, run: 
+```python3 test_app.py ```
 ## API Reference
 ### Getting Started
-- Base URL: This app is hosted on: (URL), or it can be run locally on http://0.0.0.0:8080
+- Base URL: This app is hosted on: https://sheltered-bayou-87289.herokuapp.com/, or it can be run locally on http://127.0.0.1:5000/
 - Authentication: This version of the application requires authentication for all endpoints
 
 ### Error Handling
