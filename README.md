@@ -37,7 +37,7 @@ There are 3 roles:
 - Producer: Have all permissions
 
 ### Endpoints
-#### GET /actors
+#### GET /actors (Casting Assistant, Casting Director, Producer)
 - General: Returns a list of all actors objects and success value
 - Sample:
 ```
@@ -57,7 +57,7 @@ There are 3 roles:
   "success": true
 }
 ```
-#### GET /movies
+#### GET /movies (Casting Assistant, Casting Director, Producer)
 - General: Returns a list of all movies objects and success value
 - Sample:
 ```
@@ -76,7 +76,7 @@ There are 3 roles:
 }
 ```
 
-#### POST /actors
+#### POST /actors (Casting Director, Producer)
 - General: Creates a new actor using JSON request parameters and returns success value, newly created actor
 - Sample: Response for a request with following body {"name": "Brad P", "age": 45, "gender": "Male"} and the appropriate header: 
 
@@ -90,7 +90,7 @@ There are 3 roles:
   "success": true
 }
 ```
-#### POST /movies
+#### POST /movies (Producer)
 - General: Creates a new movie using JSON request parameters and returns success value, newly created movie
 - Sample: Response for a request with following body {"title": "Avatar", "release_date": "2020-01-03"} and the appropriate header:
 ```
@@ -100,6 +100,42 @@ There are 3 roles:
     "title": "Avatar"
   },
   "success": true
+}
+```
+#### DELETE /actors/<int:id> (Casting Director, Producer)
+- General: Deletes an actor from the database by id and returns success value and id of the deleted actor
+- Sample: Response for a request to delete an actor with id=2 and the appropriate header:
+```
+{
+  "deleted": 2,
+  "success": true
+}
+```
+#### DELETE /movies/<int:id> (Producer)
+- General: Deletes a movie from the database by id, returns success value and id of the deleted movie
+- Sample: Response for a request to delete a movie with id=2 and the appropriate header:
+```
+{
+  "deleted": 2,
+  "success": true
+}
+```
+#### PATCH /actors/<int:id> (Casting Director, Producer)
+- General: Modifies an actor by id using JSON request parameters and returns success value and id of the modified actor
+- Sample: Response for a request to modify an actor with id=3, with the following body {"name": "Tien Le","age": "22","gender": "Female"} and the appropriate header:
+```
+{
+  "success": true,
+  "updated": 3
+}
+```
+#### PATCH /movies/<int:id> (Casting Director, Producer)
+- General: Modifies a movie by id using JSON request parameters; returns success value and id of the modified movie
+- Sample: Response for a request to modify a movie with id=3, with the following body{"title": "Mat Biec", "release_date": "2020-01-02"} and the appropriate header:
+```
+{
+  "success": true,
+  "updated": 3
 }
 ```
 ## Authors
