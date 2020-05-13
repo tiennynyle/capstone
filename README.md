@@ -2,7 +2,7 @@
 ## Casting Agency
 This project is the capstone project of the Full Stack Developer Nano Degree by Udacity. The goal of this project is to deploy a Flask application to Heroku with Role-Based Access Control(RBAC) using Auth0, a third-party authentication system.
 
-I decided to implement a RESTful for a Casting Agency application that enables users to create/manage actors and movies.
+I decided to implement a RESTful for a Casting Agency application that enables users to create/manage actors and movies. The motivation behind this project is for me to apply all skills that I have learned so far in the Udacity's Full Stack Developer Nano Degree course, including architecturing relational database, modeling data objects with SQLAlchemy, writing, testing and documenting a Flask API, integrating third-party authentication system, and successfully deploying an application. This simple application can help movie producers/casting directors/casting assistant with their casting and filming process by enabling role-based access control and making it convenient for each person to keep track of actors and movies data.
 
 ## Getting Started
 ### Pre-requisites and Local Development
